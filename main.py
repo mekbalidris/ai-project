@@ -1,4 +1,3 @@
-# importing the other files
 import data_preprocessing as dp
 import model_training as mt
 import evaluation as ev
@@ -17,6 +16,9 @@ def main():
     
     # find best k
     k = mt.find_optimal_k(x_train)
+    
+    # wich K we have choosed
+    print(f"\nwe choose K as : {k} <<<\n")
     
     # train the model
     model = mt.train_model(x_train, k)
