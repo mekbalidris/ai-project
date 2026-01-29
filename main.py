@@ -18,7 +18,7 @@ def main():
     k = mt.find_optimal_k(x_train)
     
     # wich K we have choosed
-    print(f"\nwe choose K as : {k} <<<\n")
+    print(f"\nwe choose K as : {k}\n")
     
     # train the model
     model = mt.train_model(x_train, k)
