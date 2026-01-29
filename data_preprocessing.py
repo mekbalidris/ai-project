@@ -84,19 +84,18 @@ def preprocess_data(df):
     else:
         print("step 8: no duplicates found.")
 
-    # STEP 9: One Hot Encoding
-    # MANUALLY DEFINING LISTS TO BE EXACT
-    # categorical: cp, restecg, slope, thal, ca (as you requested)
-    # plus sex, fbs, exang because they are binary categories
+    # STEP 9:
+
+    # Categorization
     cat_cols = ['sex', 'cp', 'fbs', 'restecg', 'exang', 'slope', 'thal', 'ca']
     
-    # numerical: the rest (continuous numbers)
+    # numerical: the rest
     num_cols = ['age', 'trestbps', 'chol', 'thalach', 'oldpeak']
     
     print("categorical columns:", cat_cols)
     print("numerical columns:", num_cols)
     
-    # perform one hot encoding
+    # perform the encoding
     df_encoded = pd.get_dummies(df, columns=cat_cols)
     
     # STEP 11: Normalization

@@ -23,7 +23,7 @@ def main():
     # train the model
     model = mt.train_model(x_train, k)
     
-    # get labels for test set (just to satisfy requirement)
+    # get labels for test set
     test_labels = model.predict(x_test)
     
     # part 3: evaluation stuff
